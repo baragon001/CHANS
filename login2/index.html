@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SimpleModal Basic Modal Dialog </title>
+<meta name='author' content='Eric Martin' />
+<meta name='copyright' content='2013 - Eric Martin' />
+
+<!-- Page styles -->
+<link type='text/css' href='css/demo.css' rel='stylesheet' media='screen' />
+
+<!-- Contact Form CSS files -->
+<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
+
+<!-- IE6 "fix" for the close png image -->
+<!--[if lt IE 7]>
+<link type='text/css' href='css/basic_ie.css' rel='stylesheet' media='screen' />
+<![endif]-->
+
+<!-- JS files are loaded at the bottom of the page -->
+</head>
+<body>
+<div id='container'>
+
+	<div id='content'>
+		<div id='basic-modal'>
+			<input type='button' name='basic' value='Login' class='basic'/>
+		</div>
+		
+		<!-- modal content -->
+		<div id="basic-modal-content">
+			<h2>Login Here</h2>
+			<form id="lform" action="index.php" method="post">
+				<table border="0">
+				 <tr>
+				   <td>Username:</td>
+				   <td>
+					<input type="text" name="username" size="25" /> <br />
+				   </td>
+				 </tr>
+				 <tr>
+				   <td>Password:</td>
+				   <td>
+					<input type="password" name="password" size="25"/> <br />
+				   </td>
+				 </tr>
+				 <tr>
+				   <td><input type="submit" value="Submit" /></td>
+				 </tr>
+				</table>	
+			</form>
+			<br/>
+			<!--Register Form-->
+			<div id="split"></div>
+			<br/>
+			<h2>Or Register</h2>
+			<form id="rform" action="index.php" method="post">
+				<table border="0">
+				 <tr>
+				   <td>Name:</td>
+				   <td>
+					<input type="text" name="name" size="25" /> <br />
+				   </td>
+				 </tr>
+				 <tr>
+				   <td>Password:</td>
+				   <td>
+					<input type="password" name="password" size="25"/> <br />
+				   </td>
+				 </tr>
+				 <tr>
+				   <td><input type="submit" value="Submit" /></td>
+				 </tr>
+				</table>	
+			</form>
+		</div>
+
+		<!-- preload the images -->
+		<div style='display:none'>
+			
+		</div>
+	</div>
+	<!-- <div id='footer'>
+		&copy; 2013 <a href='http://www.ericmmartin.com/'>Eric Martin</a><br/>
+		<a href='https://github.com/ericmmartin/simplemodal'>SimpleModal on GitHub</a><br/>
+		<a href='http://twitter.com/ericmmartin'>@ericmmartin</a> | <a href='http://twitter.com/simplemodal'>@simplemodal</a>
+	</div> -->
+</div>
+<!-- Load jQuery, SimpleModal and Basic JS files -->
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/basic.js'></script>
+</body>
+</html>
