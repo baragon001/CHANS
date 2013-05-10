@@ -1,8 +1,14 @@
 body {
-  border-top: 7px solid #F3432C;
   padding: 0 3%;
   min-width: 300px;
+  background-image: url('background.jpg');
   }
+#wrapper {
+  background-color: #f6f6f6;
+  width: 940px;
+  margin: auto;
+  padding: 15px 20px;
+}  
 #header {
   width: 100%;
   width: 940px;
@@ -16,11 +22,14 @@ body {
 	float: left;
 }	
 .main-nav {
-  width: 90%;
+  width: 70%;
+  height: auto;
   float: right;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   }
 .main-nav ul {
-   width: 60%;
+   width: 100%;
    border-top: solid 1px rgba(0, 0, 0, 0.1);
    padding-top: 1.0em;
    float: right;
@@ -30,7 +39,15 @@ body {
 }
 .main-nav ul li a {
   text-transform: uppercase;
+  text-decoration: none;
+  color: #53443F;
 }
+.main-nav a:hover {
+  color: #228774;
+  }
+.bold {
+  font-weight: bold;
+}  
 .portfolio {
   width: 940px;
   margin: 2.5% auto;

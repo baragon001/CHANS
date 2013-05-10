@@ -21,16 +21,11 @@
 <div id="wrapper">
 <div id="header">
 <div class="logo">
-<img src="chans.jpeg" alt="logo" width="400" height="78"></img>
+<a href="home.php"><img src="chanslogo.jpg" alt="logo" width="174" height="73"></img></a>
 </div>
-<div class="main-nav">
-<ul>
-<li><a href="../">01. Portfolio</a></li>
-<li><a href="./about.html">02. About</a></li>
-<li><a href="http://blog.noble-design.co.uk/">03. Blog</a></li>
-<li><a href="./contact.html">04. Contact</a></li>
-</ul>
-</div>
+<?php
+include('nav.html');
+?>
 </div>
 <div class="portfolio">
 <div id="main">
