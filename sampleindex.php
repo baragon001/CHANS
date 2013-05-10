@@ -1,5 +1,4 @@
 <?php
-#changes on line 35-40
 #session_start();
 ?>
 
@@ -8,23 +7,20 @@
 <html>
 <head>
 <title>CHANS Cornell Health and Nutrition Society</title>
-<link rel="stylesheet" href="samplecss.css">
-<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css' />
-
-<script type="text/javascript" src="js/script.js"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="css/samplecss.css">
+<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'/>
 </head>
 
 <body>
 
 <div id="wrapper">
 <div id="header">
+<?php include('inc/login2/login.html'); ?>
 <div class="logo">
-<a href="home.php"><img src="chanslogo.jpg" alt="logo" width="174" height="73"></img></a>
+<a href="sampleindex.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
 </div>
 <?php
-include('nav.html');
+include('inc/nav.html');
 ?>
 </div>
 <div class="portfolio">
