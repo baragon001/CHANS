@@ -7,7 +7,7 @@
 <html>
 <head>
 <title>CHANS Cornell Health and Nutrition Society</title>
-<link rel="stylesheet" href="css/samplecss.css">
+<link rel="stylesheet" href="samplecss.css">
 <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'/>
 </head>
 
@@ -15,7 +15,7 @@
 
 <div id="wrapper">
 <div id="header">
-<?php include('inc/login2/login.html'); ?>
+<?php include('basic/index.html'); ?>
 <div class="logo">
 <a href="sampleindex.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
 </div>
