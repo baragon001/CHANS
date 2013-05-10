@@ -20,24 +20,41 @@
 </head>
 <body>
 <div id='container'>
-	<div id='logo'>
-		<h1>Simple <span>Login</span></h1>
-		<span class='title'>Login to have access to this site</span>
-	</div>
 	<div id='content'>
-		<div id='basic-modal'>
-			<h3>Login Here</h3>
+
 			<input type='button' name='basic' value='Login' class='basic'/>
-		</div>
+
 		
 		<!-- modal content -->
 		<div id="basic-modal-content">
+			<h2>Login Here</h2>
 			<form id="lform" action="index.php" method="post">
 				<table border="0">
 				 <tr>
 				   <td>Username:</td>
 				   <td>
 					<input type="text" name="username" size="25" /> <br />
+				   </td>
+				 </tr>
+				 <tr>
+				   <td>Password:</td>
+				   <td>
+					<input type="password" name="password" size="25"/> <br />
+				   </td>
+				 </tr>
+				 <tr>
+				   <td><input type="submit" value="Submit" /></td>
+				 </tr>
+				</table>	
+			</form>
+			<!--Register Form-->
+			<h2>Or Register</h2>
+			<form id="rform" action="index.php" method="post">
+				<table border="0">
+				 <tr>
+				   <td>Name:</td>
+				   <td>
+					<input type="text" name="name" size="25" /> <br />
 				   </td>
 				 </tr>
 				 <tr>
