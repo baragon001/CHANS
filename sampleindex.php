@@ -21,7 +21,9 @@
 <a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
 </div>
 <?php
+
 include('inc/nav.html');
+
 ?>
 </div>
 <div class="portfolio">

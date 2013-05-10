@@ -2,6 +2,11 @@
 <html>
 <head>
 <title> SimpleModal Basic Modal Dialog </title>
+<script type='text/javascript' src='basic/js/jquery.js'></script>
+<script type='text/javascript' src='basic/js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='basic/js/basic.js'></script>
+
+
 <meta name='author' content='Eric Martin' />
 <meta name='copyright' content='2013 - Eric Martin' />
 
@@ -49,10 +54,9 @@
 			<br/>
 			<!--Register Form-->
 			<div id="split"></div>
-			<br/>
 			<h2>Or Register</h2>
-			<label class = "error" > Please Fix Errors </label>
-			<form id="rform" action="sampleindex.php" method="post">
+			<label class = "SubmitError" > Please Fix Errors </label>
+			<form id="rform" action="sampleindex.php" method="post" onSubmit="return validAll();">
 				<table border="0">
 				 <tr>
 				   <td>Name:</td>
@@ -85,8 +89,6 @@
 	</div> -->
 </div>
 <!-- Load jQuery, SimpleModal and Basic JS files -->
-<script type='text/javascript' src='basic/js/jquery.js'></script>
-<script type='text/javascript' src='basic/js/jquery.simplemodal.js'></script>
-<script type='text/javascript' src='basic/js/basic.js'></script>
+
 </body>
 </html>

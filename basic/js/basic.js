@@ -43,21 +43,38 @@ function checkValue() {
 	request.done(processValue);
 
 }
-
+var canSubmit = false;
 function processValue(json) {
 	
 	// Check that the returned string is the initial string of
 	// the user's input thus far
-	if (json["taken"] == "1") {
+	
+	if (json.taken == "1") {
 		$('.error').css("display", "inline");
+		canSubmit = false;
 	}
 	else {
 		$('.error').css("display", "none");
+		canSubmit = true;
 	}
 	
+
 }
 
 function trim(str)
 {
   return str.replace(/^\s+|\s+$/g, '')
 };
+
+
+
+function validAll(){
+	if (!canSubmit) {
+		$('.SubmitError').css("display", "inline");
+	}
+	return canSubmit;
+	
+}
+
+
+
