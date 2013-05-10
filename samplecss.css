@@ -25,6 +25,9 @@ body {
 	width: 10%;
 	float: left;
 }	
+#button {
+   float: right;
+   }
 .main-nav {
   width: 70%;
   height: auto;

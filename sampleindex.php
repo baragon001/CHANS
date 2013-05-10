@@ -15,9 +15,9 @@
 
 <div id="wrapper">
 <div id="header">
-<?php include('basic/index.html'); ?>
+<div id="button"><?php include('basic/index.html'); ?>
+</div>
 <div class="logo">
-<<<<<<< HEAD
 <a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
 </div>
 <?php
