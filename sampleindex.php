@@ -9,8 +9,7 @@
 <head>
 <title>CHANS Cornell Health and Nutrition Society</title>
 <link rel="stylesheet" href="samplecss.css">
-<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'/>
 
 <script type="text/javascript" src="js/script.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -21,25 +20,25 @@
 <div id="wrapper">
 <div id="header">
 <div class="logo">
-<a href="home.php"><img src="chanslogo.jpg" alt="logo" width="174" height="73"></img></a>
+<a href="home.php"><img src="img/logo.jpg" alt="logo" width="174" height="73"></img></a>
 </div>
 <?php
 include('nav.html');
 ?>
 </div>
 <div class="portfolio">
-<div id="main">
-<div class="left-column">
-<p>this page will a brief description of the site and
-a basic registration form for users have access to the
-multiple page of this website</p>
+<p>Cornell Health and Nutrition Society (CHANS) explores the intricate connection between diet, health, and nutrition. </br>
+<span class="learn"><a href="about.php">Learn more >></a></span></p>
+<div class="box1">
+<img src="img/current.jpg" alt="currentwork" width="100%" height="auto"></img>
 </div>
 
-<div class="right-column">
-<p>this page will a brief description of the site and
-a basic registration form for users have access to the
-multiple page of this website</p>
+<div class="box2">
+<a href="http://www.news.cornell.edu/stories/2013/02/student-spurs-ban-nutritional-supplement-ny" target="_blank"><img src="img/student.jpg" alt="gregmaller" width="100%" height="auto"></img></a>
 </div>
+
+<div class="box3">
+<a href="forum.php"><img src="img/forum.jpg" alt="forum" width="100%" height="auto"></img></a>
 </div>
 </div>
 <?php
