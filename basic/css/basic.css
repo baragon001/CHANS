@@ -49,3 +49,7 @@
 #simplemodal-container h3 {
 	color:#84b8d9;
 	}
+.error {
+	color:red;
+	display: none;
+}
