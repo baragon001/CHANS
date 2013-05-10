@@ -1,10 +1,15 @@
 body {
   padding: 0 3%;
   min-width: 300px;
+<<<<<<< HEAD
   background-image: url('img/background.jpg');
   font-family: 'Didact Gothic', sans-serif;
   font-size: 18px;
   color: #7A6158;
+=======
+  background-image: url('../img/background.png');
+  font-family: 'Didact Gothic', sans-serif;
+>>>>>>> 3ef5b98a26f982b4e1e9aea2bfcf27245cff958a
   }
 #wrapper {
   background-color: #f6f6f6;
