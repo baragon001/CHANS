@@ -7,7 +7,7 @@
 <html>
 <head>
 <title>CHANS Cornell Health and Nutrition Society</title>
-<link rel="stylesheet" href="csssamplecss.css">
+<link rel="stylesheet" href="samplecss.css">
 <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'/>
 </head>
 
