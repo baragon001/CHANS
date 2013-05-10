@@ -8,5 +8,14 @@
  *   http://www.opensource.org/licenses/mit-license.php
  */
 
-/* IE 6 hacks */
-#simplemodal-container a.modalCloseImg {background:none; right:-14px; width:22px; height:26px; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/basic/x.png',sizingMethod='scale');}
+jQuery(function ($) {
+	// Load dialog on page load
+	//$('#basic-modal-content').modal();
+
+	// Load dialog on click
+	$('#basic-modal .basic').click(function (e) {
+		$('#basic-modal-content').modal();
+
+		return false;
+	});
+});

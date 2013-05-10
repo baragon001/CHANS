@@ -3,9 +3,6 @@ body {
   min-width: 300px;
   background-image: url('../img/background.png');
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 18px;
-  color: #7A6158;
-  font-family: 'Didact Gothic', sans-serif;
   }
 #wrapper {
   background-color: #f6f6f6;
@@ -59,43 +56,20 @@ body {
   padding-top: 2%;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
 }
-.learn {
-   font-size: 12px;
-   float: right;
-   clear: left;
-   }
-.learn a {
-   color: #7A6158;
-   }
-.learn a:hover {
-   color: #84D2C3;
-}   
-.box1 {
+.left-column {
    width: 47%;
    padding: 10px;
    float: left;
    margin-bottom: 4%;
-   border: solid 1px #c9c5bc;
+   border: solid 1px #000000;
    -moz-border-radius: 15px;
    border-radius: 15px;
-   background-color: #e4e2de;
    }
-.box2 {
-   width: 40%;
+.right-column {
+   width: 47%;
    padding: 10px;
    float: right;
-   border: solid 1px #938f8e;
+   border: solid 1px #000000;
    -moz-border-radius: 15px;
    border-radius: 15px;
-   background-color: #9f9e9f;
    }
-.box3 {
-   width: 40%;
-   padding: 10px;
-   margin-top: 15px;
-   float: right;
-   border: solid 1px #dadbcd;
-   -moz-border-radius: 15px;
-   border-radius: 15px;
-   background-color: #edede6;
-   }   
