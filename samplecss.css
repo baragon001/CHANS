@@ -1,7 +1,8 @@
 body {
   padding: 0 3%;
   min-width: 300px;
-  background-image: url('background.jpg');
+  background-image: url('../img/background.png');
+  font-family: 'Didact Gothic', sans-serif;
   }
 #wrapper {
   background-color: #f6f6f6;
