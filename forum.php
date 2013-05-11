@@ -91,6 +91,38 @@
 								print '</a>';
 								print '</li>';
 								print "</ul>";
+								?>
+								
+								<h3>Add a Topic</h3>
+								<form id="rform" action="" method="post">
+								<table border="0">
+									<tr>
+										<td>Topic:</td>
+										<td><input type="text" name="topic" id="topic" placeholder="Your Topic"/></td>
+									</tr>
+									<tr>
+										<td><button type="submit" id="submit">Submit</button><td>
+									</tr>
+								</table>	
+								</form>
+								
+								<?php
+								$topid = "NULL";
+								if(isset($_POST['topic'])){
+									$query = "INSERT INTO Topics VALUES ('$topid', '0', '".$_POST['topic']."', CURRENT_TIMESTAMP, '$fname', 'baragon001', '0')";
+									//$update = $mysqli->query("UPDATE albums SET datemodified=CURDATE() WHERE title = " . $title);
+									$results = $mysqli->query($query);
+									if ($results){
+										print "Score! Your reply has been added";
+									}
+									else {
+										print "There was an error";
+									}
+								}
+								$topid++;
+								?>
+								
+							<?php	
 							}
 							if (!isset($_GET['tid'])){
 								exit();
