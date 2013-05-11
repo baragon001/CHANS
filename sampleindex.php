@@ -1,7 +1,31 @@
 <?php
-#session_start();
+session_start();
+$mysqli= new mysqli('localhost','CHANS', 'cs5tqe0zt1k', 'info230_SP13FP_CHANS');
+//check if user tried to login  in
+$loginSuccess = false;
+if (isset($_POST['username']) && $_POST['password']) {
+	$cleanUserName = $mysqli->real_escape_string($_POST['username']);
+	$userName = "^".$cleanUserName."$";
+	$query = "SELECT name, hashpwd FROM Users WHERE username REGEXP \"$userName\"";
+	$result = $mysqli->query($query);
+	if($result->num_rows == 0) {
+		$loginSuccess = false;
+	}
+	else {
+		$ResRow = $result->fetch_assoc();
+		$pwd = $ResRow['hashpwd'];
+		$name = $ResRow['name'];
+		if(hash('sha256', $_POST['password']) == $pwd) {
+			$loginSuccess = true;
+			$_SESSION['username'] = $_POST['username'];
+			$_SESSION['name'] = $name;
+		}
+		else {
+			$loginSuccess = false;
+		}
+	}
+}
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -13,20 +37,26 @@
 
 <body>
 
-<div id="wrapper">
-<div id="header">
-<div id="button"><?php include('basic/index.html'); ?>
-</div>
-<div class="logo">
-<a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
-</div>
+<div id="wrapper" class ="wrapper">
+<div id="header" class = "header">
 <?php
-
-include('inc/nav.html');
-
+include('inc/nav.php');
 ?>
 </div>
 <div class="portfolio">
+<div class = "ReturnMessage">
+	<?php 
+		if($loginSuccess) { ?>
+	<h2> Welcome <?php print($_SESSION['name']);?> !</h2>
+	
+	<?php }?>
+	
+	<?php 
+		if(!$loginSuccess && isset($_POST['username']) && isset($_POST['password'])) { ?>
+	<h2> Incorrect User Name and Password combination, please try again. </h2>
+	<?php }?>
+	</div>
+
 <p>Cornell Health and Nutrition Society (CHANS) explores the intricate connection between diet, health, and nutrition. </br>
 <span class="learn"><a href="about.php">Learn more >></a></span></p>
 <div class="box1">

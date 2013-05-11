@@ -7,18 +7,18 @@ body {
   color: #7A6158;
   font-family: 'Didact Gothic', sans-serif;
   }
-#wrapper {
+.wrapper {
   background-color: #f6f6f6;
   width: 940px;
   margin: auto;
   padding: 15px 20px;
 }  
-#header {
+.header {
   width: 100%;
   width: 940px;
   margin: 2% auto;
   }
-#header ul li {
+.header ul li {
    display: inline-block;
    }
 .logo {
@@ -102,3 +102,56 @@ body {
    border-radius: 15px;
    background-color: #edede6;
    }   
+  .ReturnMessage {
+  	display:block;
+  }
+  /*This is a fix for a container with floating divs*/
+.clearfix:after{
+	clear: both;
+	content: ".";
+  	display: block;
+  	height: 0;
+	visibility: hidden;
+	font-size: 0;
+}
+#greeting{
+	display: block;
+	margin: auto;
+	text-align: right;
+}
+#logout {
+	margin:auto;
+	text-align: right;
+}
+.ReturnMessage{
+	text-align:center;
+}
+
+#register{
+	clear:both;
+	width:800px;
+	font-size: 12px;
+	margin: auto;
+	text-align: right;
+}
+#register a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #53443F;
+}
+#register a:hover {
+  color: #228774;
+  }
+.centerTable {
+	margin:auto;
+	text-align:center;
+	border-spacing: 10px;
+}
+.centerHeader{
+	text-align:center;
+}
+#UNerror{
+	color:red;
+	display: none;
+}
+

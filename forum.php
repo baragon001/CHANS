@@ -13,14 +13,10 @@
 
 <body>
 
-	<div id="wrapper">
-	<div id="header">
-	<div id="button"><?php include('basic/index.html'); ?></div>
-	<div class="logo">
-		<a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
+	<div class="wrapper">
+	<div class="header">
+	<?php include('inc/nav.php'); ?>
 	</div>
-	<?php include('inc/nav.html'); ?>
-	
 	<?php
 	include ('inc/password.php');
 	if ($mysqli->errno) {
