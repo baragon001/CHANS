@@ -24,9 +24,11 @@
 	<form id="rform" action="addreply.php" method="post">
 	<table border="0">
 		<tr>
-			<td>Content:</td>
-			<td><input type="text" id="reply" name="reply" placeholder="Write your opinion"/></td>
+			<td>Reply:</td>
 		</tr>
+		<tr>
+			<td><input type="text" id="reply" name="reply" placeholder="Write your opinion"/></td>
+		</tr
 		<tr>
 			<td><input type="submit" value="Submit" /></td>
 		</tr>
@@ -35,8 +37,8 @@
 	
 	<?php
 	$replyid = "NULL";
-	if(isset($_POST['reply']) && isset($_POST['submit'])){
-		$query = "INSERT INTO replies VALUES('$replyid', 'Hey!', '4', 'baragon001')";
+	if(isset($_POST['reply'])){
+		$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '2', 'baragon001', CURRENT_TIMESTAMP)";
 		$results = $mysqli->query($query);
 		if ($results){
 			print "Score! Your reply has been added";

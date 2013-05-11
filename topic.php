@@ -28,6 +28,7 @@
 		exit();
 	}
 	?>
+	
 	<?php
 	$tid = $_GET['tid'];
 		$result = $mysqli->query("SELECT * FROM Topics WHERE tid = " . $tid);
@@ -58,10 +59,10 @@
 			<td>Reply:</td>
 		</tr>
 		<tr>
-			<td><input type="text" id="reply" name="reply" placeholder="Write your opinion"/></td>
-		</tr
+			<td><textarea id="reply" name="reply" placeholder="Leave me a message"></textarea></td>
+		</tr>
 		<tr>
-			<td><input type="submit" value="Submit" /></td>
+			<td><button type="submit" id="submit">Submit</button><td>
 		</tr>
 	</table>	
 	</form>
@@ -73,6 +74,8 @@
 		$results = $mysqli->query($query);
 		if ($results){
 			print "Score! Your reply has been added";
+			print '<br/>';
+			print $_POST['reply'];
 		}
 		else {
 			print "There was an error";
@@ -80,6 +83,7 @@
 	}
 	$replyid++;
 	?>
+	
 
 
 </body>
