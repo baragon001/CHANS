@@ -13,7 +13,14 @@
 
 <body>
 
-
+	<div id="wrapper">
+	<div id="header">
+	<div id="button"><?php include('basic/index.html'); ?></div>
+	<div class="logo">
+		<a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
+	</div>
+	<?php include('inc/nav.html'); ?>
+	
 	<?php
 	include ('inc/password.php');
 	if ($mysqli->errno) {
@@ -21,22 +28,59 @@
 		exit();
 	}
 	?>
-<?php
-$tid = $_GET['tid'];
-	$result = $mysqli->query("SELECT * FROM Topics WHERE tid = " . $tid);
-		if ($result) {
-			while ($row = $result->fetch_assoc()) {
-				$tid2 = $row['tid'];
-			}
-		}
-		$result = $mysqli->query("SELECT * FROM replies WHERE topics_tid = " . $tid);
+	<?php
+	$tid = $_GET['tid'];
+		$result = $mysqli->query("SELECT * FROM Topics WHERE tid = " . $tid);
 			if ($result) {
 				while ($row = $result->fetch_assoc()) {
-					print '<ul>';
-					print $row['content'];
-					print "</ul>";
+					$tid2 = $row['tid'];
 				}
 			}
-?>
+			$result = $mysqli->query("SELECT * FROM replies WHERE topics_tid = " . $tid);
+				if ($result) {
+					while ($row = $result->fetch_assoc()) {
+						print '<ul>';
+						print $row['content'];
+						print "</ul>";
+					}
+				}
+	?>
+	<?php 
+	$q = '"';
+	$string2 = $q."" .$tid."".$q;
+	$action = "topic.php?".$tid."";
+	?>
+	<h3>Add a Reply</h3>
+	
+	<form id="rform" action="" method="post">
+	<table border="0">
+		<tr>
+			<td>Reply:</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="reply" name="reply" placeholder="Write your opinion"/></td>
+		</tr
+		<tr>
+			<td><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>	
+	</form>
+	
+	<?php
+	$replyid = "NULL";
+	if(isset($_POST['reply'])){
+		$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '$tid', 'baragon001', CURRENT_TIMESTAMP)";
+		$results = $mysqli->query($query);
+		if ($results){
+			print "Score! Your reply has been added";
+		}
+		else {
+			print "There was an error";
+		}
+	}
+	$replyid++;
+	?>
+
+
 </body>
 </html>
