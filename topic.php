@@ -46,11 +46,7 @@
 					}
 				}
 	?>
-	<?php 
-	$q = '"';
-	$string2 = $q."" .$tid."".$q;
-	$action = "topic.php?".$tid."";
-	?>
+	
 	<h3>Add a Reply</h3>
 	
 	<form id="rform" action="" method="post">
@@ -71,6 +67,7 @@
 	$replyid = "NULL";
 	if(isset($_POST['reply'])){
 		$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '$tid', 'baragon001', CURRENT_TIMESTAMP)";
+		//$update = $mysqli->query("UPDATE albums SET datemodified=CURDATE() WHERE title = " . $title);
 		$results = $mysqli->query($query);
 		if ($results){
 			print "Score! Your reply has been added";
