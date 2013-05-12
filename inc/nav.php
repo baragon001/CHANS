@@ -36,7 +36,5 @@ if(isset($_SESSION['name'])) {
 	  <li><a href="contact.php">06. <span class='bold'>Contact</span></a></li>
      </ul>
 </div>
-
-
 </div>
 </html>

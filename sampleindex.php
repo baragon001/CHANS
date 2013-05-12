@@ -17,7 +17,7 @@ if (isset($_POST['username']) && $_POST['password']) {
 		$name = $ResRow['name'];
 		if(hash('sha256', $_POST['password']) == $pwd) {
 			$loginSuccess = true;
-			$_SESSION['username'] = $_POST['username'];
+			$_SESSION['username'] = $cleanUserName;
 			$_SESSION['name'] = $name;
 		}
 		else {
