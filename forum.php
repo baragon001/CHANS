@@ -104,7 +104,7 @@
 								<?php
 								$topid = "NULL";
 								if(isset($_POST['topic'])){
-									$query = "INSERT INTO Topics VALUES ('$topid', '0', '".$_POST['topic']."', CURRENT_TIMESTAMP, '$fname', 'baragon001', '0')";
+									$query = "INSERT INTO Topics VALUES ('$topid', '0', '".$_POST['topic']."', CURRENT_TIMESTAMP, '$fname', '".$_SESSION['username']."', '0')";
 									//$update = $mysqli->query("UPDATE albums SET datemodified=CURDATE() WHERE title = " . $title);
 									$results = $mysqli->query($query);
 									if ($results){

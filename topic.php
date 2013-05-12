@@ -1,5 +1,5 @@
 <?php
-#session_start();
+ session_start();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -13,14 +13,10 @@
 
 <body>
 
-	<div id="wrapper">
-	<div id="header">
-	<div id="button"><?php include('basic/index.html'); ?></div>
-	<div class="logo">
-		<a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
-	</div>
+	<div class="wrapper">
+	<div class="header">
 	<?php include('inc/nav.php'); ?>
-	
+	</div>
 	<?php
 	include ('inc/password.php');
 	if ($mysqli->errno) {
@@ -31,55 +27,38 @@
 	
 	<?php
 	$tid = $_GET['tid'];
-		$result = $mysqli->query("SELECT * FROM Topics WHERE tid = " . $tid);
-			if ($result) {
-				while ($row = $result->fetch_assoc()) {
-					$tid2 = $row['tid'];
+	$result = $mysqli->query("SELECT * FROM replies WHERE topics_tid = " . $tid);
+	if ($result) {
+		while ($row = $result->fetch_assoc()) {
+			print "<div id='replies'>";
+			print $row['content'];
+			print '<br/>'
+			print "</div>";
+		}
+		?>
+		<?php
+		if (isset($_SESSION['username'])) {
+			include ('addreply.php');
+			
+			$replyid = "NULL";
+			if(isset($_POST['reply'])){
+				$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '6', 'baragon001', CURRENT_TIMESTAMP)";
+				$results = $mysqli->query($query);
+				if ($results){
+					print "Score! Your reply has been added";
+				}
+				else {
+					print "BOO! There was an error";
 				}
 			}
-			$result = $mysqli->query("SELECT * FROM replies WHERE topics_tid = " . $tid);
-				if ($result) {
-					while ($row = $result->fetch_assoc()) {
-						print '<ul>';
-						print $row['content'];
-						print "</ul>";
-					}
-				}
-	?>
-	
-	<h3>Add a Reply</h3>
-	
-	<form id="rform" action="" method="post">
-	<table border="0">
-		<tr>
-			<td>Reply:</td>
-		</tr>
-		<tr>
-			<td><textarea id="reply" name="reply" placeholder="Leave me a message"></textarea></td>
-		</tr>
-		<tr>
-			<td><button type="submit" id="submit">Submit</button><td>
-		</tr>
-	</table>	
-	</form>
-	
-	<?php
-	$replyid = "NULL";
-	if(isset($_POST['reply'])){
-		$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '$tid', 'baragon001', CURRENT_TIMESTAMP)";
-		//$update = $mysqli->query("UPDATE albums SET datemodified=CURDATE() WHERE title = " . $title);
-		$results = $mysqli->query($query);
-		if ($results){
-			print "Score! Your reply has been added";
-			print '<br/>';
-			print $_POST['reply'];
-		}
-		else {
-			print "There was an error";
+			$replyid++;
+
 		}
 	}
-	$replyid++;
+	
 	?>
+	
+
 	
 
 
