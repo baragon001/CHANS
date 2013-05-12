@@ -5,7 +5,7 @@
 			<td>Reply:</td>
 		</tr>
 		<tr>
-			<td><textarea name='message' rows='15' cols='40'></textarea><br></td>
+			<td><textarea name='reply' rows='15' cols='40'></textarea><br></td>
 		</tr>
 		<tr>
 			<td><input type="submit" value="Submit" /></td>

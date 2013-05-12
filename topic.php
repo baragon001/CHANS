@@ -42,7 +42,7 @@
 			
 			$replyid = "NULL";
 			if(isset($_POST['reply'])){
-				$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '$tid', '".$_SESSION['username']."', CURRENT_TIMESTAMP)";
+				$query = "INSERT INTO replies VALUES ('$replyid', '".$_REQUEST['reply']."', '$tid', '".$_SESSION['username']."', CURRENT_TIMESTAMP)";
 				$results = $mysqli->query($query);
 				if ($results){
 					print "Score! Your reply has been added";

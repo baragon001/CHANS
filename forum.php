@@ -60,6 +60,7 @@
 		$string = $q."" .$famName."".$q;
 		$result = $mysqli->query("SELECT * FROM Forum WHERE Family_famName = " . $string);
 			if ($result) {
+				print '<h2>Forum Names</h2>';
 				while ($row = $result->fetch_assoc()) {
 					$fname = $row['fname'];
 					print "<div id='forum_name'>";
@@ -78,6 +79,7 @@
 					$string2 = $q."" .$fname."".$q;
 					$result = $mysqli->query("SELECT * FROM Topics WHERE Forum_fname = " . $string2);
 						if ($result) {
+							print '<h3>Topics</h3>';
 							while ($row = $result->fetch_assoc()) {
 								$subject = $row['subject'];
 								$tid = $row['tid'];

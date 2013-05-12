@@ -53,10 +53,10 @@
 	//if "email" is not filled out, display the form
 	  {
 	  echo "<form method='post' action=''>
-	  Email: <input name='email' type='text'><br>
-	  Subject: <input name='subject' type='text'><br>
+	  Email: <input name='email' type='text' placeholder='Your Email'><br>
+	  Subject: <input name='subject' type='text' placeholder='Subject'><br>
 	  Message:<br>
-	  <textarea name='message' rows='15' cols='40'>
+	  <textarea name='message' placeholder='Leave a Message' rows='15' cols='40'>
 	  </textarea><br>
 	  <input type='submit'>
 	  </form>";
