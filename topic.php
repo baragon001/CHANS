@@ -19,7 +19,7 @@
 	<div class="logo">
 		<a href="home.php"><img src="img/logo.png" alt="logo" width="174" height="73"></img></a>
 	</div>
-	<?php include('inc/nav.html'); ?>
+	<?php include('inc/nav.php'); ?>
 	
 	<?php
 	include ('inc/password.php');
