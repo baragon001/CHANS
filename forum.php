@@ -1,5 +1,5 @@
 <?php
-#session_start();
+ session_start();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -91,20 +91,15 @@
 								print '</a>';
 								print '</li>';
 								print "</ul>";
+								}
+								?>
+								<?php
+								if (isset($_SESSION['username'])) {
+								
+									include 'addtopic.php';
 								?>
 								
-								<h3>Add a Topic</h3>
-								<form id="rform" action="" method="post">
-								<table border="0">
-									<tr>
-										<td>Topic:</td>
-										<td><input type="text" name="topic" id="topic" placeholder="Your Topic"/></td>
-									</tr>
-									<tr>
-										<td><button type="submit" id="submit">Submit</button><td>
-									</tr>
-								</table>	
-								</form>
+								
 								
 								<?php
 								$topid = "NULL";
@@ -120,25 +115,26 @@
 									}
 								}
 								$topid++;
+								}
 								?>
 								
 							<?php	
-							}
+							
 							if (!isset($_GET['tid'])){
 								exit();
 							}
-							else {
-							$q = '"';
-							$tid = $_GET['tid'];
-								$result = $mysqli->query("SELECT * FROM replies WHERE topics_tid = " . $tid);
-									if ($result) {
-										while ($row = $result->fetch_assoc()) {
-											print '<ul>';
-											print $row['content'];
-											print "</ul>";
-										}
-								}
-							}
+							// else {
+							// $q = '"';
+							// $tid = $_GET['tid'];
+								// $result = $mysqli->query("SELECT * FROM replies WHERE topics_tid = " . $tid);
+									// if ($result) {
+										// while ($row = $result->fetch_assoc()) {
+											// print '<ul>';
+											// print $row['content'];
+											// print "</ul>";
+										// }
+								// }
+							// }
 					}
 				}
 			}
