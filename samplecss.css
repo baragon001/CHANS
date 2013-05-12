@@ -101,7 +101,65 @@ body {
    -moz-border-radius: 15px;
    border-radius: 15px;
    background-color: #edede6;
-   }   
+   }  
+.box4 {
+   width: 47%;
+   padding: 10px;
+   float: left;
+   margin-bottom: 4%;
+   border: solid 1px #f6f6f6;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #f6f6f6;
+   }
+.box5 {
+   width: 40%;
+   padding: 10px;
+   float: right;
+   border: solid 1px #84D2C3;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #FFFFFF;
+   }
+.box6 {
+   width: 40%;
+   padding: 10px;
+   margin-top: 15px;
+   float: right;
+   border: solid 1px #84D2C3;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #FFFFFF;
+   }     
+.box7 {
+   width: 47%;
+   padding: 10px;
+   float: left;
+   margin-bottom: 4%;
+   border: solid 1px #65bec4;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #9bdddb;
+   }
+.box8 {
+   width: 40%;
+   padding: 10px;
+   float: right;
+   border: solid 1px #84D2C3;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #FFFFFF;
+   }
+.box9 {
+   width: 40%;
+   padding: 10px;
+   margin-top: 15px;
+   float: right;
+   border: solid 1px #2d2e30;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #000000;
+   }    
   .ReturnMessage {
   	display:block;
   }
