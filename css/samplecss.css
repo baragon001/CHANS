@@ -73,3 +73,9 @@ body {
    -moz-border-radius: 15px;
    border-radius: 15px;
    }
+ table {
+	border-collapse: collapse;
+	}
+#replies {
+	border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}

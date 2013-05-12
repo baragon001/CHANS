@@ -5,8 +5,8 @@
 			<td>Reply:</td>
 		</tr>
 		<tr>
-			<td><input type="text" id="reply" name="reply" placeholder="Write your opinion"/></td>
-		</tr
+			<td><textarea name='message' rows='15' cols='40'></textarea><br></td>
+		</tr>
 		<tr>
 			<td><input type="submit" value="Submit" /></td>
 		</tr>

@@ -32,8 +32,8 @@
 		while ($row = $result->fetch_assoc()) {
 			print "<div id='replies'>";
 			print $row['content'];
-			print '<br/>'
 			print "</div>";
+			print '<br/>';
 		}
 		?>
 		<?php
@@ -42,7 +42,7 @@
 			
 			$replyid = "NULL";
 			if(isset($_POST['reply'])){
-				$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '6', 'baragon001', CURRENT_TIMESTAMP)";
+				$query = "INSERT INTO replies VALUES ('$replyid', '".$_POST['reply']."', '$tid', '".$_SESSION['username']."', CURRENT_TIMESTAMP)";
 				$results = $mysqli->query($query);
 				if ($results){
 					print "Score! Your reply has been added";

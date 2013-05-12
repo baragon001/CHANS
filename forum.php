@@ -48,6 +48,7 @@
 		print '</td>';
 		print '</tr>';
 		print "</table>";
+		print '<br/>';
 	}
 	
 	if (!isset($_GET['famName'])){
@@ -61,17 +62,12 @@
 			if ($result) {
 				while ($row = $result->fetch_assoc()) {
 					$fname = $row['fname'];
-					print '<table id="table_2" border="1" width="75%">';
-					print '<tr>';
-					print '<td>';
-					print '<ul>';
-					print '<li class="fname"><a href="forum.php?famName='.$famName.'&fname='.$row['fname'].'">';
+					print "<div id='forum_name'>";
+					print '<a href="forum.php?famName='.$famName.'&fname='.$row['fname'].'">';
 					print $row['fname'];
-					print '</a></li>';
-					print '</ul>';
-					print '</td>';
-					print "</tr>";
-					print '</table>';
+					print '</a>';
+					print "</div>";
+					print '<br/>';
 				}
 				if (!isset($_GET['fname'])){
 					exit();

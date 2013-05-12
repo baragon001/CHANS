@@ -212,4 +212,37 @@ body {
 	color:red;
 	display: none;
 }
-
+table {
+	border-collapse: collapse;
+	}
+#replies {
+	border: solid 1px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+}
+#forum_name {
+	border: solid 1px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	width: 80%;
+	}
+#forum_name a:hover {
+	color: #228774;
+	}
+#forum_name a{
+	text-decoration: none;
+	color: #53443F;
+	}
+.subject a {
+	text-decoration: none;
+	color: #53443F;
+	}
+.subject a:hover {
+	color: #228774;
+	}
+.famName a {
+	text-decoration: none;
+	color: #53443F;
+	font-weight:bold;
+	}
+.famName a:hover {
+	color: #228774;
+	}
